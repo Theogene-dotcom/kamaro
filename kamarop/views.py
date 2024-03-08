@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("kigali ngaliiiiiiiiiiiiiiiii")
+    return HttpResponse("my name is:"{data:object.obj()})
