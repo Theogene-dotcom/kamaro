@@ -1,0 +1,1 @@
+web: gunicorn kamarop.wsgi --log-file -
