@@ -2,37 +2,37 @@ from django.shortcuts import render
 from django.contrib import messages
 
 def index(request):
-    return render(request,'kigalicoding/index.html')
+    return render(request,'index.html')
 
 def about(request):
-    return render(request,'kigalicoding/about.html')
+    return render(request,'about.html')
 
 def appDev(request):
-    return render(request,'kigalicoding/appDev.html')
+    return render(request,'appDev.html')
 
 def contact(request):
-    return render(request,'kigalicoding/contact.html')
+    return render(request,'contact.html')
 
 def hiring(request):
-    return render(request,'kigalicoding/hiring.html')
+    return render(request,'hiring.html')
 
 def learning(request):
-    return render(request,'kigalicoding/learning.html')
+    return render(request,'learning.html')
 
 def portfolio(request):
-    return render(request,'kigalicoding/portfolio.html')
+    return render(request,'portfolio.html')
 
 def team(request):
-    return render(request,'kigalicoding/team.html')
+    return render(request,'team.html')
 
 def terms(request):
-    return render(request,'kigalicoding/terms.html')
+    return render(request,'terms.html')
 
 def uxui(request):
-    return render(request,'kigalicoding/uxui.html')
+    return render(request,'uxui.html')
 
 def webDev(request):
-    return render(request,'kigalicoding/webDev.html')
+    return render(request,'webDev.html')
 
 def page_not_found(request):
-    return render(request,'kigalicoding/404.html')
+    return render(request,'404.html')
