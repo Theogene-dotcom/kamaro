@@ -1,1 +1,401 @@
-welcome kwa Theogene uri umuntu w'umugabo rwose ndakwemeye
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Status bar color -->
+	<meta name="theme-color" content="#00b982"> <!-- Android -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#00b982"> <!-- IOS -->
+
+	<!-- Title -->
+	<title>Kigali Coding</title>
+	
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!-- Bootstrap5 Css -->
+	{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+	<!-- Box icons CSS -->
+	{% load static %}
+<link rel="stylesheet" href="{% static 'font/bootstrap-icons.css' %}">
+          {% load static %}
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+
+
+	<!-- SEO Optimization -->
+	<meta name="description"
+		content="CODE HUNT’S is a dedicated team of passionate developers based in Islamabad, Pakistan.">
+	<meta name="keywords" content="Software Company, codehunts, codehunt, code hunts, Code HUNT’S">
+	<meta name="author" content="Muhammad Naveed">
+
+	<!-- logo -->
+	<link rel="icon" href="{% static 'assets/favicon.ico' %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'assets/site.webmanifest' %}">
+
+	<!-- Animate JS -->
+	<script defer src="{% static 'js/animate.js' %}"></script>
+</head>
+
+<body>
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-blur">
+		<div class="container col-xxl-8">
+			
+			<a class="navbar-brand" href="{% url 'index' %}">
+				<img src="{% static 'assets/pcslogo.jpg' %}" alt="code hunts logo" class="" alt="" height="60px" loading="lazy" />
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Services
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 4px;">
+							<li><a class="dropdown-item" href="{% url 'webDev' %}">Web Development</a></li>
+							<li><a class="dropdown-item" href="{% url 'appDev' %}">App Development</a></li>
+							<li><a class="dropdown-item" href="{% url 'uxui' %}">Graphics Designing</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'portfolio' %}">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'team' %}">Our Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="container  col-xxl-8 px-4 py-5">
+		<div
+			class="row flex-lg-row-reverse align-items-center py-5 justify-content-center justify-content-lg-between mt-5">
+			<div class="col-10 col-sm-8 col-lg-5">
+				<img src="{% static 'assets/hero_img.png' %}" class="img-fluid" alt="hero img iphone pic" width="700" height="500"
+					loading="lazy">
+			</div>
+			<div class="col-lg-6 ">
+				<h1 id="section-heading">Digitalize your business with only <span class="primary_text"> Trusted tech solution company</span></h1>
+				<p id="section-paragraph" class="lead text-muted">Revolutionizing the Future of businesses </p>
+				<a href="#gettingStarted" class="btn-md-green">
+					<i class="bi-send-fill"> </i>
+					Get Started
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="container col-xxl-8 px-4">
+		<!-- Row -->
+		<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+			<!-- Column -->
+			<div class="col ">
+				<div class="card text-center services-card shadow">
+					<div class="card-body">
+						<img src="{% static 'assets/it_solutions.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
+						<h5 class="card-title">App Development</h5>
+						<p class="card-text">Windows, Android and IOS app development and free consultency.</p>
+						<a href="{% url 'appDev' %}" class="link">Read more</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Column -->
+			<div class="col">
+				<div class="card text-center services-card shadow">
+					<div class="card-body">
+						<img src="{% static 'assets/web_designs.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
+						<h5 class="card-title">Web Development</h5>
+						<p class="card-text">Introducing Bleading Edge Technologies.</p>
+						<a href="{% url 'webDev' %}" class="link">Read more</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Coloumn -->
+			<div class="col">
+				<div class="card text-center services-card shadow">
+					<div class="card-body">
+						<img src="{% static 'assets/ux_ui.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
+						<h5 class="card-title">UX/UI Designing</h5>
+						<p class="card-text">UX/UI Design is Bridging the Gap Between Users and Technology.</p>
+						<a href="{% url 'uxui' %}" class="link">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Web-development Section -->
+	<div class="odd-section">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5 " style="justify-content: space-evenly">
+				<div class="col-10 col-sm-8 col-lg-5">
+					<img src="{% static 'assets/choose-1.png' %}" class="img-fluid" alt="Web solutions illustration" width="700"
+						height="500" loading="lazy">
+				</div>
+				<div class="col-lg-6">
+					<h1 id="section-heading">Website Solutions</span></h1>
+					<p id="section-paragraph">
+						Our team of experienced web developers and designers will work closely with you to understand
+						your unique
+						requirements and objectives. We believe that a well-designed website not only enhances your
+						brand image but
+						also provides a seamless user experience.
+					</p>
+					<div class="row">
+						<div class="col-md-6">
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">E-Commerce
+								Websites</button>
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">WordPress
+								Websites</button>
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">Bootstrap5
+								Websites</button>
+						</div>
+						<div class="col-md-6">
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">Web
+								Design</button>
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">CSS3
+								Based</button>
+							<button class="btn-lg-green-outline shadow " style="cursor: default;">SCSS
+								Based</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--- Applications Development Section -->
+	<div class="even-section">
+		<div class="container col-xxl-8 px-4">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5 " style="justify-content: space-evenly">
+				<div class="col-lg-6">
+					<h1 id="section-heading">Tech Soul for your Business</span></h1>
+					<p id="section-paragraph">
+						An effective IT solution provides a comprehensive approach that encompasses hardware, software,
+						networking,
+						security, and support services tailored to the specific needs of an organization.
+					</p>
+					<div class="row">
+						<div class="col-md-6">
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">Graphics
+								Designing</button>
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">UX/UI
+								Designing</button>
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">Logo
+								Designing</button>
+						</div>
+						<div class="col-md-6">
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">Android
+								apps</button>
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">IOS
+								apps</button>
+							<button class="btn-lg-green-outline shadow hiddenGlow" style="cursor: default;">Windows
+								apps</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-10 col-sm-8 col-lg-5">
+					<img src="{% static 'assets/choose-2.png' %}" class="img-fluid" alt="Tech Business illustration" width="700"
+						height="500" loading="lazy">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Company Details -->
+	<div class="details-section">
+		<div class="container col-xxl-8 px-4">
+			<div class="row text-center">
+				<div class="col-lg-3 ">
+					<h1>5+</h1>
+					<h5>Years of Experience</h5>
+				</div>
+
+				<div class="col-lg-3 ">
+					<h1>27</h1>
+					<h5>Completed Projects</h5>
+				</div>
+
+				<div class="col-lg-3 ">
+					<h1>7</h1>
+					<h5>Employees</h5>
+				</div>
+
+				<div class="col-lg-3 ">
+					<h1>100+</h1>
+					<h5>5 Start Rating</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Expert Team Members -->
+	<div><class="container col-xxl-8 px-4 mt-5">
+		<h1 class=" text-center mt-5">Our Expert Team Members</h1>
+    </div>
+	
+	
+	<div class="container col-xxl-8 px-4">
+		<div class="row text-center">
+				<!-- Team member 1 -->
+			  <div class=" col-lg-3 team">
+					<img src="{% static 'assets/team/pcsteam1.jpg' %}" alt="CTO personal photo" class="team-img-cover" />
+					<h4>Theogene MUSENGIMANA</h4>
+					<h6><i class="bi bi-code-slash"></i> Software Engineer</h6>
+			  </div>
+
+				<!-- Team member 2 -->
+			    <div class=" col-lg-3 team">
+					<img src="{% static 'assets/team/pcsteam1.jpg' %}" alt="CEO personal photo" class="team-img-cover" />
+					<h4>Paul RUGEMANA</h4>
+					<h6><i class="bi bi-android2"></i> Android Developer</h6>
+			    </div>
+
+				<!-- Team member 3 -->
+				<div class=" col-lg-3 team">
+					<img src="{% static 'assets/team/pcsteam1.jpg' %}" alt="UX/UI designer personal photo" class="team-img-cover" />
+					<h4>Emmanuel KAREKEZI</h4>
+					<h6><i class="bi bi-globe"></i> SEO Expert</h6>
+				</div>
+
+				<!-- Team member 4 -->
+				<div class=" col-lg-3 team">
+					<img src="{% static 'assets/team/pcsteam.jpeg' %}" alt="Web developer personal photo"
+						class="team-img-cover" />
+					<h4>Cedrick IRAGUHA</h4>
+					<h6><i class="bi bi-browser-safari"></i> Web Developer</h6>
+				</div>
+
+				<a href="{% url 'team' %}">View all</a>
+
+		
+	    </div>
+	</div>
+
+	<!-- Have a project idea -->
+	<div class="details-section" id="gettingStarted">
+		<div class="container col-xxl-8 px-4 py-5">
+					<h1>Have a project in mind?</h1>
+					<p class="wrap-text">
+						We thrive on turning your ideas into reality. Whether you have a groundbreaking concept
+						or a specific problem that needs solving,
+						we are here to transform your vision into a remarkable
+						digital solution. With our team of skilled developers, designers,
+						and strategists, we are ready to embark on a collaborative
+						journey with you, bringing expertise, innovation, and cutting-edge
+						technology to the table.
+					</p>
+					<a href="{% url 'contact' %}" class="btn-md-green-secondary">
+						<i class="bi-chat"> </i>
+						Contact Us
+					</a>
+				</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="bd-footer py-5 mt-5 bg-light">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row">
+				<!-- Company Name -->
+				<div class="col-lg-3 col-md-6 footer-contact">
+					<a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="./index.html">
+						<h5 class="fs-5">Kigali coding</h5>
+					</a>
+					<p class="text-muted">
+						kn 260st, Nyarugenge <br> Commercial area <br><br>
+						<strong>Phone:</strong> <a href="tel:+923094617390" itemprop="telephone">+250 792 555 553</a><br>
+						<strong>Email:</strong> <a href="mailto: codehuntspk@gmail.com">kigalicoding@gmail.com</a><br>
+					</p>
+				</div>
+
+				<!-- UserFull Links -->
+				<div class="col-lg-3 col-md-6 footer-links">
+					<h5>Useful Links</h5>
+					<ul class="list-unstyled lnk">
+						<li class="mb-2"><a href="{% url 'index' %}"><i class="bi-link"></i> Home</a></li>
+						<li class="mb-2"><a href="{% url 'team' %}"><i class="bi-link"></i> Our Team</a></li>
+						<li class="mb-2"><a href="{% url 'about' %}"><i class="bi-link"></i> About us</a></li>
+						<li class="mb-2"><a href="{% url 'contact' %}"><i class="bi-link"></i> Contact us</a></li>
+						<li class="mb-2"><a href="{% url 'hiring' %}"><i class="bi-link"></i> Carrers</a></li>
+						<li class="mb-2"><a href="{% url 'learning' %}"><i class="bi-link"></i> Learning</a></li>
+					</ul>
+				</div>
+
+				<!-- Services  -->
+				<div class="col-lg-3 col-md-6 footer-links">
+					<h5>Our Services</h5>
+					<ul class="list-unstyled lnk">
+						<li class="mb-2"><a href="{% url 'contact' %}"><i class="bi-link"></i> Bootstrap5</a></li>
+						<li class="mb-2"><a href="{% url 'webDev' %}"><i class="bi-link"></i> WordPress</a></li>
+						<li class="mb-2"><a href="{% url 'appDev' %}"><i class="bi-link"></i> Windows apps</a></li>
+						<li class="mb-2"><a href="{% url 'appDev' %}"><i class="bi-link"></i> Android apps</a>
+						</li>
+						<li class="mb-2"><a href="{% url 'appDev' %}"><i class="bi-link"></i> IOS apps</a></li>
+						<li class="mb-2"><a href="{% url 'uxui' %}"><i class="bi-link"></i> UX/UI Designing</a></li>
+						<li class="mb-2"><a href="{% url 'uxui' %}"><i class="bi-link"></i> Graphics Designing</a>
+						</li>
+						<li class="mb-2"><a href="{% url 'uxui' %}"><i class="bi-link"></i> Logo Designing</a></li>
+					</ul>
+				</div>
+
+				<!-- Social Network -->
+				<div class="col-lg-3 col-md-6 footer-links">
+					<h5>Our Social Networks</h5>
+					<p class="text-muted">A group of passionate developers, designers and problem solvers.</p>
+					<div class="social-links mt-3">
+						<a href="https://twitter.com/Kigalicoding1"><i class="bi-twitter"></i></a>
+						<a href="https://web.facebook.com/people/kigalicoding/"><i
+								class="bi-facebook"></i></a>
+						<a href="https://www.instagram.com/kigalicoding/"><i class="bi-instagram"></i></a>
+						<a href="https://www.youtube.com/kigalicoding"><i class="bi-youtube"></i></a>
+						<a href="https://www.linkedin.com/in/kigali-coding-20b2092b6/"><i class="bi-linkedin"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- Privacy Notice -->
+	<div class="footer  py-3 bg-dark text-light">
+		<div class="container mt-3 col-xxl-8">
+			<p>© 2024 PC Select Ltd, Inc. · <a href="{% url 'terms' %}" target="_blank" class="text-light">Terms.</a></p>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<a class="btt d-flex align-items-center justify-content-center" href="#" id="backtotop">
+		<i class="bi-arrow-up-short"> </i>
+	</a>
+	<!-- Bootstrap5 JS -->
+	<script src=" ./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+
+</html>
