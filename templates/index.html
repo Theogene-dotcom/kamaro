@@ -1,4 +1,4 @@
-{% load static%}
+      {% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +61,29 @@
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
 					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Services
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 4px;">
+							<li><a class="dropdown-item" href="{% url 'webDev' %}">Web Development</a></li>
+							<li><a class="dropdown-item" href="{% url 'appDev' %}">App Development</a></li>
+							<li><a class="dropdown-item" href="{% url 'uxui' %}">Graphics Designing</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'portfolio' %}">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'team' %}">Our Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -96,7 +119,7 @@
 						<img src="{% static 'assets/it_solutions.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
 						<h5 class="card-title">App Development</h5>
 						<p class="card-text">Windows, Android and IOS app development and free consultency.</p>
-						<a href="" class="link">Read more</a>
+						<a href="{% url 'appDev' %}" class="link">Read more</a>
 					</div>
 				</div>
 			</div>
@@ -108,7 +131,7 @@
 						<img src="{% static 'assets/web_designs.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
 						<h5 class="card-title">Web Development</h5>
 						<p class="card-text">Introducing Bleading Edge Technologies.</p>
-						<a href="" class="link">Read more</a>
+						<a href="{% url 'webDev' %}" class="link">Read more</a>
 					</div>
 				</div>
 			</div>
@@ -120,7 +143,7 @@
 						<img src="{% static 'assets/ux_ui.png' %}" style="margin: 20px 0px 30px 0px; max-height: 120px;" />
 						<h5 class="card-title">UX/UI Designing</h5>
 						<p class="card-text">UX/UI Design is Bridging the Gap Between Users and Technology.</p>
-						<a href="" class="link">Read more</a>
+						<a href="{% url 'uxui' %}" class="link">Read more</a>
 					</div>
 				</div>
 			</div>
@@ -269,7 +292,7 @@
 					<h6><i class="bi bi-browser-safari"></i> Web Developer</h6>
 				</div>
 
-				<a href="team.html">View all</a>
+				<a href="{% url 'team' %}">View all</a>
 
 		
 	    </div>
@@ -288,7 +311,7 @@
 						journey with you, bringing expertise, innovation, and cutting-edge
 						technology to the table.
 					</p>
-					<a href="contact.html" class="btn-md-green-secondary">
+					<a href="{% url 'contact' %}" class="btn-md-green-secondary">
 						<i class="bi-chat"> </i>
 						Contact Us
 					</a>
@@ -317,7 +340,7 @@
 					<h5>Useful Links</h5>
 					<ul class="list-unstyled lnk">
 						<li class="mb-2"><a href="{% url 'index' %}"><i class="bi-link"></i> Home</a></li>
-						<li class="mb-2"><a href="team.html"><i class="bi-link"></i> Our Team</a></li>
+						<li class="mb-2"><a href="{% url 'team' %}"><i class="bi-link"></i> Our Team</a></li>
 						<li class="mb-2"><a href="{% url 'about' %}"><i class="bi-link"></i> About us</a></li>
 						<li class="mb-2"><a href="{% url 'contact' %}"><i class="bi-link"></i> Contact us</a></li>
 						<li class="mb-2"><a href="{% url 'hiring' %}"><i class="bi-link"></i> Carrers</a></li>

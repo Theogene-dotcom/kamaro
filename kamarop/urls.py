@@ -1,5 +1,5 @@
 """
-URL configuration for kamarop project.
+URL configuration for kigalicoding project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -20,5 +20,17 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index, name='index'),
+    path('', views.index, name='index'),
+    path('index/', views.index, name='index'),
+    path('contact/', views.contact, name='contact'),
+    path('team/', views.team, name='team'),
+    path('terms/', views.terms, name='terms'),
+    path('appDev/', views.appDev, name='appDev'),
+    path('hiring/', views.hiring, name='hiring'),
+    path('about/', views.about, name='about'),
+    path('learning/', views.learning, name='learning'),
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('uxui/', views.uxui, name='uxui'),
+    path('webDev/', views.webDev, name='webDev'),
+    path('404/', views.page_not_found, name='404'),
 ]
