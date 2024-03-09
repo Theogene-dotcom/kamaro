@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'kamarop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'NAME': 'da6u884l2l77kr',
+        'USER': 'u74t8er5polouo',
+        'PASSWORD': 'pdc47701b0686004c8346e53f6db81f97d12abcc82757ac571886e8dad4eaf3db',
+        'HOST': 'ceu9lmqblp8t3q.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
