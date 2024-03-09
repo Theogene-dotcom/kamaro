@@ -99,46 +99,47 @@
 						<br>
 					</div>
 				</div>
-				<form id="projectForm">
+				<form method="POST">
+					{% csrf_token %}
 					<div class="row g-3">
 						<div class="col-6">
-							<label for="username" class="form-label">First Name* </label>
-							<input type="text" class="form-control" id="userFirstName" placeholder=""
+							<label for="userFirstName" class="form-label">First Name* </label>
+							<input type="text" class="form-control" name="userFirstName" value="userFirstName" placeholder=""
 								required="">
 						</div>
 
 						<div class="col-6">
-							<label for="username" class="form-label">Last Name* </label>
-							<input type="text" class="form-control" id="userLastName" placeholder=""
+							<label for="userLastName" class="form-label">Last Name* </label>
+							<input type="text" class="form-control" name="userLastName" value="userLastName" placeholder=""
 								required="">
 						</div>
 
 						<div class="col-6">
-							<label for="username" class="form-label">Email* </label>
-							<input type="text" class="form-control" id="userEmail" placeholder=""
+							<label for="userEmail" class="form-label">Email* </label>
+							<input type="text" class="form-control" name="userEmail" value="userEmail" placeholder=""
 								required="">
 						</div>
 
 						<div class="col-6">
-							<label for="countryname" class="form-label">Phone number</label>
-							<input type="tel" class="form-control  " id="contactNumber" placeholder="">
+							<label for="contactNumber" class="form-label">Phone number</label>
+							<input type="tel" class="form-control  " name="contactNumber" value="contactNumber"placeholder="">
 						</div>
 
 						<div class="col-12">
-							<label for="countryname" class="form-label">Company or Organization*</label>
-							<input type="text" class="form-control" id="compName"
+							<label for="compName" class="form-label">Company or Organization*</label>
+							<input type="text" class="form-control" name="compName" value="compName"
 								placeholder="">
 						</div>
 
 						<div class="col-md-12">
-							<label for="statename" class="form-label">Project title*</label>
-							<input type="text" class="form-control  " id="projectTitle"
+							<label for="projectTitle" class="form-label">Project title*</label>
+							<input type="text" class="form-control  " name="projectTitle" value="projectTitle"
 								placeholder="" required="">
 						</div>
 
 						<div class="col-12">
-							<label for="message" class="form-label">Project discription*</label> <br>
-							<textarea rows="12" class="form-control" id="projectDisp"
+							<label for="projectDisp" class="form-label">Project discription*</label> <br>
+							<textarea rows="12" class="form-control" name="projectDisp" value="projectDisp"
 								placeholder="" required=""></textarea>
 						</div>
 					</div>
@@ -148,7 +149,7 @@
 					</span>
 					<br> <br>
 					<!-- Submit btn -->
-					<button class="btn-submit-green shadow" type="submit" id="submitBtn">Submit</button>
+					<button class="btn-submit-green shadow" type="submit" name="showcontact">Submit</button>
 				</form>
 			</div>
 		</div>

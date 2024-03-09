@@ -1,0 +1,36 @@
+{% load static %}
+<html><head>lololololol</head>
+<title>Kigali coding contact database</title>
+    <body>
+        {% load static %}
+    <form>
+    {% csrf_token %}
+<table border='1'>
+    <center>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email </th>
+        <th>Contact Number</th>
+        <th>Company Name</th>
+        <th>Project Title</th>
+        <th>Project Description</th>
+    </tr>
+    {% load static %}
+    
+    <tr>
+          <td>{{result.id}}</td>
+          <td>{{result.userFirstName}}</td>
+          <td>{{result.userLastName}}</td>
+          <td>{{result.userEmail}}</td>
+          <td>{{result.contactNumber}}</td>
+          <td>{{result.compName}}</td>
+          <td>{{result.projectTitle}}</td>
+          <td>{{result.projectDisp}}</td>
+    </tr>
+   
+    </center>
+    </form>
+    </body>
+
+</html>

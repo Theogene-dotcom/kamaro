@@ -33,4 +33,6 @@ urlpatterns = [
     path('uxui', views.uxui, name='uxui'),
     path('webDev', views.webDev, name='webDev'),
     path('404', views.page_not_found, name='404'),
+    path('contact',views.insertcontact, name='insertcontact'),
+    path('showcontact',views.showcontact, name='showcontact'),
 ]

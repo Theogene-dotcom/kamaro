@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from kamarop.models import contactmodel
 
 def index(request):
     return render(request,'index.html')
@@ -36,3 +37,26 @@ def webDev(request):
 
 def page_not_found(request):
     return render(request,'404.html')
+
+def insertcontact(request):
+    if request.method=="POST":
+        if request.POST.get('userFirstName') and request.POST.get('userLastName') and request.POST.get('userEmail') and request.POST.get('contactNumber') and request.POST.get('compName') and request.POST.get('projectTitle') and request.POST.get('projectDisp'):
+            saverecord=contactmodel()
+            saverecord.userFirstName=request.POST.get('userFirstName')
+            saverecord.userLastName=request.POST.get('userLastName')
+            saverecord.userEmail=request.POST.get('userEmail')
+            saverecord.contactNumber=request.POST.get('contactNumber')
+            saverecord.compName=request.POST.get('compName')
+            saverecord.projectTitle=request.POST.get('projectTitle')
+            saverecord.projectDisp=request.POST.get('projectDisp')
+            saverecord.save()
+            messages.success(request,'User'+saverecord.userFirstName+'is saved successfully!')
+            return render(request,'showcontact.html')
+        
+    else:
+        
+            return render(request,'showcontact.html')
+        
+def showcontact(request):
+    showall=contactmodel.objects.all()
+    return render(request,'showcontact.html',{"data":showall})
